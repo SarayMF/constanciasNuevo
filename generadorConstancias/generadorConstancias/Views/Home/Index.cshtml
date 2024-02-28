@@ -1,0 +1,30 @@
+﻿@using generadorConstancias.Models
+@model LoginViewModel
+@{
+    ViewBag.Title = "login";
+}
+<div class="contenedor-principal center">
+
+    <div class="contenedor-login">
+        <div class="center">
+            <div class="contenedor-titulo-login center">
+                Iniciar sesi&oacute;n
+            </div>
+        </div>
+
+        <br />
+
+        <div class="div-alert center">
+            <center><div class="alert alert-info" role="alert">Nota: debe ingresar con su correo institucional</div></center>
+        </div>
+
+        <div class="center">
+            @Html.Partial("~/Views/Account/_ExternalLoginsListPartial.cshtml", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
+        </div>
+
+
+
+    </div>
+
+
+</div>

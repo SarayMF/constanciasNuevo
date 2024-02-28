@@ -1,0 +1,103 @@
+﻿﻿
+@{
+    ViewBag.Title = "consultarConstancia";
+}
+
+<div class="contenedor-principal">
+    <nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="~/Imagenes/itl-logo.jpg" alt="" width="20">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Index", "Servicios")">Generar constancias</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Consultar constancia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("capturar", "Servicios")">Capturar fechas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fa fa-sign-out"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="center contenedor-generador">
+        <div class="contenedor-consulta">
+            <center><h2>Lista de constancias</h2></center>
+            <br />
+            <div class="row">
+                <div class="col-12 col-sm-3">
+                    <div class="mb-3">
+                        <label for="fechaIni" class="form-label">Fecha inicio:</label>
+                        <input type="date" class="form-control" id="fechaIni">
+                    </div>
+                </div><!-- /.col-lg-6 -->
+                <div class="col-12 col-sm-3">
+                    <div class="mb-3">
+                        <label for="fechaFin" class="form-label">Fecha fin:</label>
+                        <input type="date" class="form-control" id="fechaFin">
+                    </div>
+                </div><!-- /.col-lg-6 -->
+                <div class="col-3 col-sm-2">
+                    <br />
+                    <button class="btn btn-primary" style="margin-top:8px"><i class="fa fa-search" aria-hidden="true"></i></button>
+                </div>
+            </div><!-- /.row -->
+            <br /><br />
+            <div class="table-responsive overflow-auto" style="height:270px">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Folio</th>
+                            <th scope="col">Numero de control</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Carrera</th>
+                            <th scope="col">Tipo de constancia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                       
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="pull-left" style="position:absolute;">
+                <p style="padding-top:20px; ">En total hay <strong>100</strong> constancias emitidas</p>
+            </div>
+
+            <div class="pull-right">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+    </div>
+</div>
